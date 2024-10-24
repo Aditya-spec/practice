@@ -12,14 +12,18 @@ public class BFSAndDFSAndRepresentation {
     private static List<List<Integer>> getGraphRepresentation() {
         Representation representation = new Representation();
         List<List<Integer>> adj = representation.getGraph();
-        for (int i = 0; i < adj.size();i++){
+        printGraphRepresentation(adj);
+        return adj;
+    }
+
+    private static void printGraphRepresentation(List<List<Integer>> adj) {
+        for (int i = 0; i < adj.size(); i++){
             System.out.println("For " + i + "::");
             for(int j = 0; j< adj.get(i).size(); j++){
                 System.out.print(adj.get(i).get(j) + "  ");
             }
             System.out.println();
         }
-        return adj;
     }
 
     private static void dfs(List<List<Integer>> adj) {
@@ -58,16 +62,17 @@ class DFS{
         }
     }
 }
+
 class BFS{
     public  void bfs(List<List<Integer>> adj, int u, boolean[] visited, List<Integer> result){
         Queue<Integer> q = new LinkedList<>();
         q.add(u);
         while(!q.isEmpty()){
             Integer curr = q.poll();
-            if(!visited[curr]){
-                result.add(curr);
-                visited[curr] = true;
-                for(Integer i : adj.get(curr)){
+            result.add(curr);
+            visited[curr] = true;
+            for(Integer i : adj.get(curr)){
+                if(!visited[i]){
                     q.add(i);
                 }
             }
@@ -81,8 +86,8 @@ class Representation{
         for(int i = 0; i < vertices; i++){
             adj.add(new ArrayList<>());
         }
-        addData(adj,0,1);
         addData(adj,0,2);
+        addData(adj,0,1);
         addData(adj,1,3);
         addData(adj,2,4);
         addData(adj,4,1);
