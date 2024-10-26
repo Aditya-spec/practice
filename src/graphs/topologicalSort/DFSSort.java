@@ -1,9 +1,11 @@
-package graphs;
+package graphs.topologicalSort;
+
+import graphs.GetGraph;
 
 import java.util.List;
 import java.util.Stack;
 
-public class TopologicalSort {
+public class DFSSort {
     public static void main(String[] args) {
         GetGraph getGraph = new GetGraph();
         int[][] matrix = {
