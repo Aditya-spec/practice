@@ -6,6 +6,17 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * Logic::
+ *
+ * 1)Set indegree for all the nodes using an array
+ *
+ * 2)add all those nodes in the queue whose indegree is 0
+ *
+ * 3) while queue isn't empty, keep taking out element (u)
+ * and for (u) keep reducing  value of v by 1 in indegree and if indegree[v] == 0, add [v] in the queue
+ */
+
 public class BFSSort {
     public static void main(String[] args) {
         GetGraph getGraph = new GetGraph();
