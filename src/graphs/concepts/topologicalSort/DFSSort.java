@@ -1,6 +1,6 @@
-package graphs.topologicalSort;
+package graphs.concepts.topologicalSort;
 
-import graphs.GetGraph;
+import graphs.concepts.GetGraph;
 
 import java.util.List;
 import java.util.Stack;

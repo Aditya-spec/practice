@@ -1,4 +1,4 @@
-package graphs.cyleDetection.undirected;
+package graphs.concepts.cyleDetection.undirected;
 
 import java.util.ArrayList;
 import java.util.List;

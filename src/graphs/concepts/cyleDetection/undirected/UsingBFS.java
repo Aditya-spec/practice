@@ -1,6 +1,6 @@
-package graphs.cyleDetection.undirected;
+package graphs.concepts.cyleDetection.undirected;
 
-import graphs.GetGraph;
+import graphs.concepts.GetGraph;
 
 import java.util.LinkedList;
 import java.util.List;
