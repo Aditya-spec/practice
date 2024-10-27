@@ -1,9 +1,4 @@
-package graphs.questions;
-
-import graphs.CreateGraphNew;
-
-import java.util.ArrayList;
-import java.util.List;
+package graphs.numberOfProvince;
 
 /**
  * It is a simple dfs traversal in which while calling dfs we are checking if the node is visited or not
@@ -23,13 +18,14 @@ public class NumberOfProvince {
                 {0,0,1}
 
         };
-        NumberOfProvinceSolution obj = new NumberOfProvinceSolution();
+        NumberOfProvinceSolutionDFS obj = new NumberOfProvinceSolutionDFS();
         obj.method(matrix);
+
     }
 
 }
 
-class NumberOfProvinceSolution{
+class NumberOfProvinceSolutionDFS {
     public void method(int[][] matrix){
 
         int n = matrix.length;
