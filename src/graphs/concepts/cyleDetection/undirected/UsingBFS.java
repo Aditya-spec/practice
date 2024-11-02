@@ -26,7 +26,7 @@ public class UsingBFS {
             if(!visited[i]){
                 Node node = new Node(i, -1);
                 UsingBFSSolution usingBFSSolution = new UsingBFSSolution();
-                boolean cycle = usingBFSSolution.detectCycle(adj, i, visited, node);
+                boolean cycle = usingBFSSolution.detectCycle(adj, visited, node);
                 if(cycle){
                     System.out.println("true");
                     break;
@@ -39,7 +39,7 @@ public class UsingBFS {
 }
 
 class UsingBFSSolution{
-    public boolean detectCycle(List<List<Integer>> adj, int u, boolean[] visited, Node node){
+    public boolean detectCycle(List<List<Integer>> adj, boolean[] visited, Node node){
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
         visited[node.val] = true;

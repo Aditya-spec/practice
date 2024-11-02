@@ -1,4 +1,4 @@
-package graphs.numberOfProvince;
+package graphs.questions.numberOfProvince;
 
 /**
  * It is a simple dfs traversal in which while calling dfs we are checking if the node is visited or not

@@ -1,4 +1,4 @@
-package graphs.numberOfProvince;
+package graphs.questions.numberOfProvince;
 
 import java.util.LinkedList;
 import java.util.Queue;
