@@ -57,13 +57,12 @@ class MeetingRoomSolution{
     public void getMaxMeetings(int[] start, int[] end, int n) {
         List<Meeting> meetingList = new ArrayList<>();
         ArrayList<Integer> answer = new ArrayList<>();
-        int endTime = 0;
         for (int i = 0; i < n; i++ ){
             meetingList.add(new Meeting(start[i], end[i], i));
         }
         meetingList.sort(new MeetingComparator());
         answer.add(meetingList.get(0).pos);
-        endTime = meetingList.get(0).end;
+        int endTime = meetingList.get(0).end;
         for(int i = 1; i < meetingList.size(); i++){
             Meeting meeting = meetingList.get(i);
             if(meeting.start > endTime){
@@ -72,8 +71,8 @@ class MeetingRoomSolution{
             }
         }
         System.out.println("The order in which the meetings will be performed is ");
-        for(int i = 0;i<answer.size(); i++) {
-            System.out.print(answer.get(i) + " ");
+        for (Integer integer : answer) {
+            System.out.print(integer + 1 + " ");
         }
 
     }
