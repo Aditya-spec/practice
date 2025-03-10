@@ -28,7 +28,6 @@ public class PrintSpiral {
                 left++;
             }
         }
-        return void;
     }
 
 }
