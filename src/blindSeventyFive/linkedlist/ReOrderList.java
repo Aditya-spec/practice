@@ -45,7 +45,7 @@ public class ReOrderList {
     private Node getMiddle(Node node) {
         Node fastP = node;
         Node slowP = node;
-        while (fastP != null || fastP.next.next != null ){
+        while (fastP != null || fastP.next != null ){
             slowP = slowP.next;
             fastP = fastP.next.next;
         }

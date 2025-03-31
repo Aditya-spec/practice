@@ -1,6 +1,6 @@
 package blindSeventyFive.linkedlist;
 
-class Node {
+public class Node {
     int data;
     Node next;
 

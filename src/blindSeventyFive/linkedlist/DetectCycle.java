@@ -5,8 +5,8 @@ public class DetectCycle {
         Node fast = head;
         Node slow  = head;
         while(fast != null || fast.next != null){
-            fast = fast.next;
             slow = slow.next;
+            fast = fast.next.next;
             if(slow == fast){
                 return true;
             }
